@@ -10,7 +10,7 @@ app.post('/register', (req, res)=>{
     const user = new User(req.body)
     user.save()
     .then((result)=>{
-        res.status(201).send('User has been registered successfully.')
+        res.status(201).send('User has been registered successfully')
     })
     .catch((error)=>{
         res.status(400).send(error.message)
